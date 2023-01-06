@@ -50,6 +50,8 @@ def display_site():
     with col2:
         searched = st.text_input("Search")
 
+    st.snow()
+
     new_url = generate_url(url, category, searched)
     req = make_request(new_url)
 
@@ -60,5 +62,7 @@ def display_site():
 
     for result in list_results:
         st.markdown("- " + result)
+
+    st.balloons()
 
 display_site()
