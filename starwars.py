@@ -31,11 +31,12 @@ def print_results(list_url, category):
     for url in list_url:
         req = requests.get(url)
         for res in req.json()["results"]:
-            if category != "films":
-                results.append(res["name"])
-            else:
-                results.append(res["title"])
-    return results
+            results.append(res)
+            # if category != "films":
+            #     results.append(res["name"])
+            # else:
+            #     results.append(res["title"])
+    return pd.DataFrame(results)
 
 def display_site():
     url = "https://swapi.dev/api/"
