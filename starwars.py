@@ -61,8 +61,7 @@ def display_site():
 
     st.write(f"We found {len(list_results)} result(s) :")
 
-    for result in list_results:
-        st.markdown("- " + result)
+    list_results
 
     st.balloons()
 
